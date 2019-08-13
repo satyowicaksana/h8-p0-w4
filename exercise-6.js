@@ -9,10 +9,7 @@ function digitPerkalianMinimum(angka) {
     Simpan panjang string yang paling kecil selama loop dilakukan */
     for(var i = 1; i <= Math.ceil(angka / 2); i++) {
         if(angka % i === 0){
-            // console.log(i);
-            // console.log(angka / i);
             digit = String(i) + (angka / i);
-            // console.log(digit);
             if(countMin > digit.length) {
                 countMin = digit.length;
             }
