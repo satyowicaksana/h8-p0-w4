@@ -17,10 +17,8 @@ function cariModus(arr) {
     }
     var uniqueIndex = 0;
     var countMax = 0;
-    console.log(uniqueArr[0][1]);
     for(var i = 0; i < arr.length; i++) {
         uniqueIndex = uniqueArr.indexOf(arr[i]);
-        console.log(uniqueIndex)
         countArr[uniqueIndex] += 1;
         if(countMax < countArr[uniqueIndex]) {
             countMax = countArr[uniqueIndex];
