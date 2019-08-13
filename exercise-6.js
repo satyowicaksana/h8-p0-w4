@@ -9,21 +9,21 @@ function digitPerkalianMinimum(angka) {
     Simpan panjang string yang paling kecil selama loop dilakukan */
     for(var i = 1; i <= Math.ceil(angka / 2); i++) {
         if(angka % i === 0){
-            console.log(i);
-            console.log(angka / i);
+            // console.log(i);
+            // console.log(angka / i);
             digit = String(i) + (angka / i);
-            console.log(digit);
+            // console.log(digit);
             if(countMin > digit.length) {
                 countMin = digit.length;
             }
         }
     }
-    return digit.length;
+    return countMin;
 }
 
 // TEST CASES
-// console.log(digitPerkalianMinimum(24)); // 2
-// console.log(digitPerkalianMinimum(90)); // 3
-// console.log(digitPerkalianMinimum(20)); // 2
-// console.log(digitPerkalianMinimum(179)); // 4
-// console.log(digitPerkalianMinimum(1)); // 2
+console.log(digitPerkalianMinimum(24)); // 2
+console.log(digitPerkalianMinimum(90)); // 3
+console.log(digitPerkalianMinimum(20)); // 2
+console.log(digitPerkalianMinimum(179)); // 4
+console.log(digitPerkalianMinimum(1)); // 2

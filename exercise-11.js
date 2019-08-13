@@ -40,7 +40,7 @@ console.log(shoppingTime('1820RzKrnWn08', 2475000));
 //    'Sweater Uniklooh',
 //    'Casing Handphone' ],
 // changeMoney: 0 }
-// console.log(shoppingTime('82Ku8Ma742', 170000));
+console.log(shoppingTime('82Ku8Ma742', 170000));
 // //{ memberId: '82Ku8Ma742',
 // // money: 170000,
 // // listPurchased:

@@ -5,6 +5,9 @@ function changeMe(arr) {
         gender: '',
         age: 0
     }
+    if(arr.length === 0) {
+        console.log('""');
+    }
     for(var i = 0; i < arr.length; i++) {
         console.log(i + 1 + '. ' + arr[i][0] + ' ' + arr[i][1] + ':');
         obj.firstName = arr[i][0];
