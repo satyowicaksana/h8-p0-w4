@@ -7,22 +7,19 @@ function countProfit(shoppers) {
     if(shoppers.length === 0) {
         return [];
     }
-    var itemShoppers = [[], [], []];
-    var itemLeftovers = [[10], [2], [1]];
-    var itemIndex = -1;
+    var itemShoppers = [];
+    var itemLeftovers = [];
+    for(var i = 0; i < listBarang.length; i++) {
+        itemShoppers[i] = [];
+        itemLeftovers[i] = listBarang[i][2];
+    }
+    
     for(var i = 0; i < shoppers.length; i++){
-        switch(shoppers[i].product) {
-            case 'Sepatu Stacattu':
-                itemIndex = 0;
-                break;
-            case 'Baju Zoro':
-                itemIndex = 1;
-                break;
-            case 'Sweater Uniklooh':
-                itemIndex = 2;
-                break;
-            default:
-                itemIndex = -1;
+        var itemIndex = -1;
+        for(var j = 0; j < listBarang.length; j++) {
+            if(shoppers[i].product === listBarang[j][0]) {
+                itemIndex = j;
+            }
         }
         if((itemLeftovers[itemIndex] - shoppers[i].amount >= 0) && (itemIndex >= 0)){
             itemShoppers[itemIndex].push(shoppers[i].name);

@@ -13,11 +13,11 @@ function changeMe(arr) {
         obj.firstName = arr[i][0];
         obj.lastName = arr[i][1];
         obj.gender = arr[i][2];
-        if(arr[i][3] !== undefined) {
-            var today = new Date();
-            obj.age = today.getFullYear() - arr[i][3];
-        } else {
+        var today = new Date();
+        if(arr[i][3] === undefined || arr[i][3] > today.getFullYear()) {
             obj.age = 'Invalid birth year';
+        } else {
+            obj.age = today.getFullYear() - arr[i][3];
         }
         console.log(obj);
     }
